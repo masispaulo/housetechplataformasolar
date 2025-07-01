@@ -2,7 +2,7 @@
 import { GoogleGenAI } from "@google/genai";
 import { QuoteDetails } from "../types";
 
-const API_KEY = process.env.GEMINI_API_KEY;
+const API_KEY = import.meta.env.VITE_GEMINI_API_KEY;
 
 if (!API_KEY) {
     throw new Error("API_KEY not found. Please set the environment variable.");
